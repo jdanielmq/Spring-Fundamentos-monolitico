@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<ul>
+		<li>
+			<a th:href="@{/params/string(texto='hola soy daniel')}">
+			Link 1 : con un parametro en string
+			</a>
+		</li>
+		<li>
+			<a th:href="@{/params/string(texto='hola soy Juan Daniel')}">
+			Link 2 : con un parametro en string para ver que cambia.
+			</a>
+		</li>
+		<li>
+			<a th:href="@{/params/mix-params(saludo='Como estas daniel', numero=10)}">
+			Link 3 : con 2 parametros un String y un Integer
+			</a>
+		</li>
+		<li>
+			<a th:href="@{/params/mix-params-request(saludo='Como estas daniel', numero=10)}">
+			Link 4 : se le pasan los valores y se ocupa el HttpServletRequest
+			</a>
+		</li>
+	
+	</ul>
+</body>
+</html>

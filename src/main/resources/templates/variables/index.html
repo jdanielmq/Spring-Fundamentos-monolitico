@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1>
+		<ul>
+		<li>
+			<a th:href="@{/variables/string/}+' prueba de envio de mis datos'">
+			Link 1 : con un parametro en string
+			</a>
+		</li>
+		<li>
+			<a th:href="@{/variables/string/}+' otra prueba con el siguiente texto'">
+			Link 2 : con un parametro en string es otra prueba con solo un parametro de String
+			</a>
+		</li>
+		<li>
+			<a th:href="@{/variables/string/}+' otra prueba con el siguiente link'+'/'+ 263">
+			Link 3 : probando el metodo con 2 paramentos texto y numero
+			</a>
+		</li>		
+		<li>
+			<a th:href="@{/variables/string/}+${'otra prueba pero con llaves'} +'/'+ ${256}">
+			Link 4 : probando el metodo con 2 paramentos texto y numero, pero ocupando las ${}
+			</a>
+		</li>			
+		
+	</ul>
+
+</body>
+</html>
