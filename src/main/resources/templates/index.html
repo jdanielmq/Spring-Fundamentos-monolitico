@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html
-	xmlns:th ="http://www.thymeleaf.org"
->
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8"/>
+<meta charset="UTF-8" />
 <title th:text="${titulo}"></title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/> 
 </head>
 <body>
-	<h1>Hola Spring</h1>
-
+	<h1 class="color-rojo">Hola Spring</h1>
+	<h2 class="color-azul">Segundo</h2>
+	
+	<img alt="" th:src="@{/image/20200724203713.png}"/>
+	
 </body>
 </html>
